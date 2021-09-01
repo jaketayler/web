@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="icon.png" rel="icon"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formúlario HTML - Novas ferramentas Web e Frameworks</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+</head>
+<body>
+	<h1 class="text-center display-5">Formúlario de Cadastro:</h1>
+	<div class="container mt-5">
+		<form action="">
+			<div class="row mt-2">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="userName" class="form-label">Nome:</label>
+						<input type="text" class="form-control" id="userName" placeholder="Ex: João da Silva">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="userCode" class="form-label">Código:</label>
+						<input type="number" id="userCode"class="form-control" placeholder="Ex: 6969">
+					</div>
+				</div>
+				<div class="col-md-1 align-text-bottom">
+					<div class="form-group">						
+						<input type="checkbox" id="userStatus" class="form-checkbox-input">
+						<label for="userStatus" class="form-label">Ativo</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-2">	
+				<div class="col-md-9">
+					<div class="form-group">
+						<label for="userFantaName" class="form-label">Nome Fantasia</label>
+						<input type="text" id="userFantaName"class="form-control" placeholder="Ex: Unicornios Azuis Calcinha">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="from-group">
+						<label for="userCep" class="form-label">CEP:</label>
+						<input type="number" id="userCep"class="form-control" placeholder="Ex: 11.222-333">
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="userAdress" class="form-label">Endereço:</label>
+						<input type="text" id="userAdress" class="form-control" placeholder="Ex: Rua Dos Lobisomens Albinos">
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="userNumAdress" class="form-label">Número:</label>
+						<input type="text" id="userNumAdress" class="form-control">
+					</div>	
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="userComplement" class="form-label">Complemento</label>
+						<input type="text" id="userComplement" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="userNeighborhood" class="form-label">Bairro:</label>
+						<input type="text" id="userNeighborhood" class="form-control">
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="userCity" class="form-label">Cidade:</label>
+						<input type="text" class="form-control" placeholder="Ex: Cascavel ">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<label for="UF" class="form-label">UF:</label>
+						<select class="form-select" id="UF">
+						  <option value="SP">SP</option>
+						  <option value="PR">PR</option>
+						  <option value="RS">RS</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label for="userAtivit" class="form-label">Ramo de Atividade:</label>
+						<input type="text" id="userAtivit"class="form-control">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="userNature" class="form-label">Natureza do Cliente</label>
+						<select name="" class="form-select" id="userNature">
+							<option value="pj">Pessoa Juridica</option>
+							<option value="pf">Pessoa Física</option>
+						</select>						
+				</div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="CNPJ" class="form-label">CNPJ:</label>
+						<input type="text" id="CNPJ" class="form-control" placeholder="00.000.000/0001-00">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="" class="form-label">Inscrição Estadual</label>
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="" class="form-label">Website:</label>
+						<input type="text" class="form-control" placeholder="www.exemplo.com.br">
+					</div>
+				</div>
+			</div>
+			<div class="row mt-2">
+				<div class="col-md-5">
+					<div class="form-group">
+						<label for="" class="form-label">E-mail:</label>
+						<input type="email" class="form-control" placeholder="exemplo@exemplo.com.br">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<label for="" class="form-label">Telefone:</label>
+						<input type="text" class="form-control" placeholder="(45) 9 9999-8888">
+					</div>
+				</div>
+				<div class="col-md-1">
+					<div class="form-group">
+						<label for="" class="form-label">Ramal:</label>
+						<input type="text" class="form-control" placeholder="120">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<label for="" class="form-label">Fax:</label>
+						<input type="text" class="form-control" placeholder="(45) 3333-1111">
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<label for="" class="form-label">Cliente desde:</label>
+						<input type="date" class="form-control">
+					</div>
+				</div>				
+				
+			</div>
+
+		</form>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+</body>
+</html>

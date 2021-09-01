@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home do Site</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div class="container">
+		<div  id="frmCad">
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-3">
+						<label class="form-label" for="cod">Código:</label>
+						<input  class="form-control" type="text" id="cod">
+					</div>
+					<div class="col-md-9">
+						<label class="form-label" for="desc">Descrição:</label>
+						<input  class="form-control" type="text" id="desc">
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-md-12 pull-right">
+						<button type="button" id="btnSave" class="btn btn-success">Cadastrar</button>
+						<button type="button" id="btnCanelar" class="btn btn-warning">Cancelar</button>		
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="frmList">
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-12 pull-right">
+						<button class="btn btn-primary" type="button" id="btnAdd">
+							Adicionar
+						</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table id="tblProducts" class="table">
+							<thead>
+								<tr>
+									<th>Cod:</th>
+									<th>Descrição:</th>	
+									<th>Ações:</th>								
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Valores são inseridos ao executar a função adicionar em app.js -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- Scripts bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

@@ -35,7 +35,7 @@ function save(){
  
   $("#cod").val("");
   $("#desc").val("");
-  
+
   $("#frmList").show();
   $("#frmCad").hide();
 
@@ -47,7 +47,7 @@ function loadingProducts(){
       "<tr>"+
         "<td>" + prod.Codigo + "</td>"+
         "<td>" + prod.Descricao + "</td>"+
-        "<td> <button class='btn btn-primary'>Editar</button> <button class='btn btn-danger'>Remover</button> </td>"+
+        "<td> <button class='btn btn-primary'><i class='fas fa-edit'></i>Editar</button> <button class='btn btn-danger'> <i class='fas fa-trash-alt'></i>Remover</button> </td>"+
       "</tr>"
     )
   });

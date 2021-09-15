@@ -27,12 +27,28 @@ function cancelar(){
 
 function save(){
 
-  product.Codigo = $("#cod").val();
-  product.Descricao = $("#desc").val();
-
-  products.push(product);
+  if(product.Codigo == ""){
+    product.Codigo = $("#cod").val();
+    product.Descricao = $("#desc").val();
+    
+    products.push(product);
+    // Verificar se  passou no condição
+    console.log("NOVO PRODUTO!!")
+    
+  } else{    
+    // Verifica as informações em cada posição do array de objetos.
+    products.map(function(prod){      
+      if(product.Codigo == prod.Codigo ){
+        product.Descricao = $("#desc").val();
+        // Verificar se  passou no condição
+        console.log("Produto Editado");
+      }
+      
+    });
+  }
+  
   loadingProducts();
- 
+  
   $("#cod").val("");
   $("#desc").val("");
 
@@ -47,7 +63,7 @@ function edit(){
         return prod.Codigo == codProduct;
       })[0];
       
-      console.log(prodSearch);
+      // console.log(prodSearch);
 
       $("#cod").val(product.Codigo);
       $("#desc").val(product.Descricao);
@@ -58,12 +74,14 @@ function edit(){
 }
 
 function loadingProducts(){
+  $("#tblProducts tbody").html("");
+
   products.map(function(prod){
     $("#tblProducts tbody").append(
       "<tr>"+
-        "<td>" + prod.Codigo + "</td>"+
-        "<td>" + prod.Descricao + "</td>"+
-        "<td> <button class='btn btn-edit btn-primary mr-5' data-codigo='" + prod.Codigo + "' onclick='edit()'><i class='fas fa-edit'></i>Editar</button> "+
+        "<td class='col-md-3'>" + prod.Codigo + "</td>"+
+        "<td class='col-md-6'>" + prod.Descricao + "</td>"+
+        "<td class='col-md-3'> <button class='btn btn-edit btn-primary mr-5' data-codigo='" + prod.Codigo + "' onclick='edit()'><i class='fas fa-edit'></i>Editar</button> "+
          "<button class='btn btm-remove btn-danger ml-5' data-codigo='"+ prod.Codigo + "'> <i class='fas fa-trash-alt'></i>Remover</button> </td>"+
       "</tr>"
     )

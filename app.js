@@ -73,6 +73,21 @@ function edit(){
     });
 }
 
+
+function remove(){
+    $(".btn-remove").each(function(btn){
+      var codProduct = $(this).data("codigo"); 
+      $(this).on("click",function(){
+          // console.log(codProduct);
+          products = products.filter(function(prod){
+            return prod.Codigo != codProduct;
+          });
+          loadingProducts();
+          console.log("Item removido");
+        });
+      });     
+}
+
 function loadingProducts(){
   $("#tblProducts tbody").html("");
 
@@ -82,11 +97,12 @@ function loadingProducts(){
         "<td class='col-md-3'>" + prod.Codigo + "</td>"+
         "<td class='col-md-6'>" + prod.Descricao + "</td>"+
         "<td class='col-md-3'> <button class='btn btn-edit btn-primary mr-5' data-codigo='" + prod.Codigo + "' onclick='edit()'><i class='fas fa-edit'></i>Editar</button> "+
-         "<button class='btn btm-remove btn-danger ml-5' data-codigo='"+ prod.Codigo + "'> <i class='fas fa-trash-alt'></i>Remover</button> </td>"+
+         "<button class='btn btn-remove btn-danger ml-5' data-codigo='"+ prod.Codigo + "'> <i class='fas fa-trash-alt'></i>Remover</button> </td>"+
       "</tr>"
     )
   });
-  edit();
+  // edit();
+  remove();
 }
 
 $(document).ready(function(){
